@@ -1,0 +1,19 @@
+eureka:
+  instance:
+    status-page-url-path: /info
+    health-check-url-path: /health
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
+    ip-address: 120.79.66.240
+  client:
+    service-url:
+      defaultZone: http://120.79.66.240:8761/eureka/,http://120.79.66.240:8762/eureka/
+    healthcheck:
+      enabled: true
+    eurekaServiceUrlPollIntervalSeconds: 60
+
+management:
+  health:
+    status:
+      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP 

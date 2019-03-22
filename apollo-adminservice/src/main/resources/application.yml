@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: apollo-adminservice
+  profiles:
+    active: ${apollo_profile}
+
+ctrip:
+  appid: 100003172
+  
+server:
+  port: 8090
+  
+logging:
+  file: /opt/logs/100003172/apollo-adminservice.log
+
+info:
+  version: 0.0.1
+  describe: 这是自设的Apollo-adminservice
